@@ -6,23 +6,21 @@
     <title>Alpine F1 News</title>
 	<link rel="icon" type="image/png" href="Alogo.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script> 
-	
-		$(document).ready(function(){
+    <script type="text/javascript">
+	$(document).ready(function(){
 	$.ajax({
 	type: "GET",
 	url: "news.xml",
 	dataType: "xml",
-	success: populate
+	success: xmlParser
 	});
 	});
-	
-	function populate(xml){
-	$(xml).find("entry").each(function(){
-	$("#news").append('<div class="newsContainer">' + '\n' + '<h2 class="newsTitle">' + $(this).find("headline").text() + '</h2>' + '\n' + '<p class="newsBody">' + $(this).find("body").text() + '</p></div>');
-	});
-	}
-	</script>
+function xmlParser(xml) {
+    $(xml).find("entry").each(function () {
+        $("#news").append("<div> class="+"painting"+ $(this).find("headline").text()+"</div>");
+    });
+} 
+    </script>
     <style>
 
         body {
