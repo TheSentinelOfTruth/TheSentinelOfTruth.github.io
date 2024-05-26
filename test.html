@@ -16,7 +16,7 @@
 	});
 function xmlParser(xml) {
     $(xml).find("entry").each(function () {
-        $("#news").append("<div> class="+'"newsContainer><h2>"'+ $(this).find("headline").text() + "</h2></div>") + "<p>" + $(this).find("headline").text() + "</p>";
+$("#news").append('<div class="newsContainer">' + '\n' + '<h2 class="newsTitle">' + $(this).find("headline").text() + '</h2>' + '\n' + '<p class="newsBody">' + $(this).find("body").text() + '</p></div>');
     });
 } 
     </script>
