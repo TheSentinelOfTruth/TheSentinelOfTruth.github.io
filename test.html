@@ -16,16 +16,14 @@
 	});
 function xmlParser(xml) {
     $(xml).find("entry").each(function () {
-$("body").append('<div class="newsContainer">' + '\n' + '<h2 class="newsTitle">' + $(this).find("headline").text() + '</h2>' + '\n' + '<p class="newsBody">' + $(this).find("body").text() + '</p></div>');
-    });
+	$("#news").append('<div class="newsContainer">' + '\n' + '<h2 class="newsTitle">' + $(this).find("headline").text() + '</h2>' + '\n' + '<p class="newsBody">' + $(this).find("body").text() + '</p>' + '\n' + '<p class="newsInfo">' + 'Published on ' + $(this).find("entry").attr("date").text() + ' by ' + $(this).find("by").text() + '</p>' + '\n' + '<a href="' + $(this).find("source").text() + '" class="readMoreBtn">Read More</a>' + '\n' + '</div>');
+   });
 } 
     </script>
 </head>
 <body>
     <div id="news"></div>
-    <script>
-        xmlParser();
-    </script>
+
 	<button onclick="xmlParser()">Click me</button>
 </body>
 </html>
