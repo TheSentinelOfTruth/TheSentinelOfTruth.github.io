@@ -18,7 +18,7 @@
 
     function xmlParser(xml) {
         $(xml).find("entry").each(function () {
-            $("#body").append('\n' + '<h2 class="newsTitle">' + $(this).find("headline").text() + '</h2>');
+            $("#body").append("\n" + "<h2 class=" +"newsTitle"+ ">" + $(this).find("headline").text() + "</h2>");
         });
     }
 							console.log(xmlParser);
