@@ -15,9 +15,10 @@
 	success: xmlParser
 	});
 	});
+	
 function xmlParser(xml) {
     $(xml).find("entry").each(function () {
-        $("#news").append("<div> class="+"painting"+ $(this).find("headline").text()+"</div>");
+        $("#news").append("<div> class="+'"newsContainer"'+ $(this).find("headline").text()+"</div>");
     });
 } 
     </script>
