@@ -13,7 +13,6 @@
             url: "news.xml",
             dataType: "xml",
             success: xmlParser
-			console.log(xmlParser.toString());
         });
     });
 
@@ -22,6 +21,7 @@
             $("#news").append('<div class="newsContainer">' + '\n' + '<h2 class="newsTitle">' + $(this).find("headline").text() + '</h2></div>');
         });
     }
+							console.log(xmlParser.toString());
 </script>
     <style>
 
