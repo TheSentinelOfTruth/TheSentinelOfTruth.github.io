@@ -7,17 +7,17 @@
 	<link rel="icon" type="image/png" href="Alogo.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript">
-	$(document).ready(function(){
+	function(){
 	$.ajax({
 	type: "GET",
 	url: "news.xml",
 	dataType: "xml",
 	success: xmlParser
 	});
-	});
+	};
 	
-function xmlParser(xml) {
-    $(xml).find("entry").each(function () {
+function xmlParser("news.xml") {
+    $("news.xml").find("entry").each(function () {
         $("#news").append("<div> class="+'"newsContainer"'+ $(this).find("headline").text()+"</div>");
     });
 } 
