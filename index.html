@@ -6,23 +6,22 @@
     <title>Alpine F1 News</title>
 	<link rel="icon" type="image/png" href="Alogo.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $.ajax({
-            type: "GET",
-            url: "news.xml",
-            dataType: "xml",
-            success: xmlParser
-        });
-    });
-
-    function xmlParser(xml) {
-        $(xml).find("entry").each(function () {
-            $("#body").append("\n" + "<h2 class=" +"newsTitle"+ ">" + $(this).find("headline").text() + "</h2>");
-        });
-    }
-							console.log(xmlParser("news.xml"));
-</script>
+    <script type="text/javascript">
+	$(document).ready(function(){
+	$.ajax({
+	type: "GET",
+	url: "news.xml",
+	dataType: "xml",
+	success: xmlParser
+	});
+	});
+function xmlParser(xml) {
+    $(xml).find("entry").each(function () {
+$("news").append('<div class="newsContainer">' + '<h2 class="newsTitle">' + $(this).find("headline").text() + "</h2>" + '<p class="newsBody">' + $(this).find("body").text() + "</p>" + '<p class="newsInfo">' + "Published on " + $(this).find("entry").attr("date") + " by " + $(this).find("by").text() + "</p>" + '<a href="' + $(this).find("source").text() + '" class="readMoreBtn">Read More</a>' + "</div>");
+   
+ });
+} 
+    </script>
     <style>
 
         body {
