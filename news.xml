@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<news>
+<news> xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemalocation="schema.xsd">
   <entry date="24.05.2024">
 	<headline>Gasly to miss crucial laps with issue in Monaco.</headline>
 	<body>Not the way Pierre Gasly wanted to start this weekend in Monaco. In FP1, the Frenchman was already called into the pit lane as he was told his car has a power unit issue. Gasly was then let out to test his car again, but Alpine quickly called him back as the issue did not go away quickly.</body>
