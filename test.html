@@ -15,7 +15,7 @@
 	});
 	});
 function xmlParser(xml) {
-    $xml.find("entry").each(function () {
+    $(xml).find("entry").each(function () {
 $("#news").append('<div class="newsContainer">' + '<h2 class="newsTitle">' + $(this).find("headline").text() + "</h2>" + '<p class="newsBody">' + $(this).find("body").text() + "</p>" + '<p class="newsInfo">' + "Published on " + $(this).find("entry").attr("date") + " by " + $(this).find("by").text() + "</p>" + '<a href="' + $(this).find("source").text() + '" class="readMoreBtn">Read More</a>' + "</div>");
    
  });
