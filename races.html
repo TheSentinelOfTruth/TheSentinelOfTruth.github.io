@@ -255,40 +255,54 @@ $(".racesr").append('<li><div class="race">' + '<img class="layout" src="' + $(t
         </div>
     </div>
 	
-	    <script>
-	        var state1 = { selectedOption: '' };
-            var state2 = { selectedOption: '' };
+    <script>
+	        var state1 = "";
+            var state2 = "";
         $(document).ready(function() {
 
-            function handleOptionSelection($input, $menu, state) {
+		if (state1 === "") {
+            function selectOption($input, $menu) {
                 $menu.on('click', '.cOption', function() {
-                    const selectedOption = $(this).text();
-                    state.selectedOption = selectedOption;
+                    let selectedOption = $(this).text();
+                    state1 = selectedOption;
                     $input.val(selectedOption);
                     $menu.hide();
+					console.log(state1);
                 });
             }
+			} else {
+			        function selectOption($input, $menu) {
+                $menu.on('click', '.cOption', function() {
+                    let selectedOption = $(this).text();
+                    state2 = selectedOption;
+                    $input.val(selectedOption);
+                    $menu.hide();
+					console.log(state2);
+                });
+            }
+			}
 
             $('.cInput').on('click', function() {
                 const $menu = $(this).siblings('.cMenu');
                 $menu.toggle();
             });
 
-            handleOptionSelection($('.cInput:eq(0)'), $('.cMenu:eq(0)'), state1);
+            selectOption($('.cInput:eq(0)'), $('.cMenu:eq(0)'));
 
-            handleOptionSelection($('.cInput:eq(1)'), $('.cMenu:eq(1)'), state2);
+            selectOption($('.cInput:eq(1)'), $('.cMenu:eq(1)'));
         });
 
 	function action() {
 
-    const selectedOption1 = state1.selectedOption.text();
-    const selectedOption2 = state2.selectedOption.text();
+    const selectedOption1 = state1;
+    const selectedOption2 = state2;
 
     if (selectedOption1 === 'Best Position' && selectedOption2 === 'Pierre') {
         console.log('success');
     } else {
-		console.log(state1.value);
-		console.log($('.cInput:eq(0)').value);
+		console.log(state1);
+		console.log(state2);
+		console.log(selectedOption1);
         console.log('Not valid');
     }
 }
