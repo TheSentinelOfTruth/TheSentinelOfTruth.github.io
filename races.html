@@ -17,7 +17,7 @@
 	});
 function xmlParser(xml) {
     $(xml).find("track").each(function () {
-$(".racesr").append('<li><div class="race">' + '<img class="layout" src="' + $(this).find("image").text() + '">' + '<p class="raceName">' + $(this).find("name").text() + "</p>" + '<div class="esteban">' + '<p class="positionStr">Position</p>' + '<p class="position">' + $(this).find("esteban").text() + '</p><p class="pointsStr">Points</p>' + '<p class="points">' + $(this).find("esteban").attr("points") + "</p></div>" + '<div class="pierre">' + '<p class="positionStr">Position</p>' + '<p class="position">' + $(this).find("pierre").text() + '</p><p class="pointsStr">Points</p>' + '<p class="points">' + $(this).find("pierre").attr("points") + "</p></div></div></li>");
+$(".racesr").append('<li><div class="race">' + '<img class="layout" src="' + $(this).find("image").text() + '">' + '<p class="raceName">' + $(this).find("name").text() + "</p>" + '<div class="esteban">' + '<p class="driver">Escteban</p>' + '<p class="positionStr">Position</p>' + '<p class="position">' + $(this).find("esteban").text() + '</p><p class="pointsStr">Points</p>' + '<p class="points">' + $(this).find("esteban").attr("points") + "</p></div>" + '<div class="pierre">' + '<p class="driver">Pierre</p>' + '<p class="positionStr">Position</p>' + '<p class="position">' + $(this).find("pierre").text() + '</p><p class="pointsStr">Points</p>' + '<p class="points">' + $(this).find("pierre").attr("points") + "</p></div></div></li>");
   
  });
 } 
