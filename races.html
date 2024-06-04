@@ -17,7 +17,7 @@
 	});
 function xmlParser(xml) {
     $(xml).find("track").each(function () {
-$(".racesr").append('<li><div class="race">' + '<img class="layout" src="' + $(this).find("image").text() + '">' + '<p class="raceName">' + $(this).find("track").attr("name") + "</p>" + '<div class="esteban">' + '<p class="positionStr">Position</p>' + '<p class="position">' + $(this).find("esteban").text() + '</p><p class="pointsStr">Points</p>' + '<p class="points">' + $(this).find("esteban").attr("points") + "</p></div>" + '<div class="pierre">' + '<p class="positionStr">Position</p>' + '<p class="position">' + $(this).find("pierre").text() + '</p><p class="pointsStr">Points</p>' + '<p class="points">' + $(this).find("pierre").attr("points") + "</p></div></div></li>");
+$(".racesr").append('<li><div class="race">' + '<img class="layout" src="' + $(this).find("image").text() + '">' + '<p class="raceName">' + $(this).find("name").text() + "</p>" + '<div class="esteban">' + '<p class="positionStr">Position</p>' + '<p class="position">' + $(this).find("esteban").text() + '</p><p class="pointsStr">Points</p>' + '<p class="points">' + $(this).find("esteban").attr("points") + "</p></div>" + '<div class="pierre">' + '<p class="positionStr">Position</p>' + '<p class="position">' + $(this).find("pierre").text() + '</p><p class="pointsStr">Points</p>' + '<p class="points">' + $(this).find("pierre").attr("points") + "</p></div></div></li>");
   
  });
 } 
@@ -176,7 +176,7 @@ $(".racesr").append('<li><div class="race">' + '<img class="layout" src="' + $(t
         <h1>ALPINE <span>Formula One Race Results</span></h1>
 		 <div class="buttons">
             <button class="button" onclick="window.location.href = 'index.html'">Home</button>
-            <button class="button" onclick="window.open('https://www.skysports.com/f1/teams/alpine/results')">Races</button>
+            <button class="button" onclick="window.location.href = 'races.html'">Races</button>
             <button class="button" onclick="window.location.href = 'Team.html'">The team</button>
             <button class="button" onclick="window.open('https://www.alpine-cars.co.uk/formula-1/f1-team.html')">Official</button>
         </div>

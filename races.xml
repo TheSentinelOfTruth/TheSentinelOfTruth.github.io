@@ -1,47 +1,55 @@
 <races>
-<track name="Bahrain">
+<track>
+<name>Bahrain</name>
 <esteban points="0">17</esteban>
 <pierre points="0">18</pierre>
 <team>0</team>
 <image>bah.png</image>
 </track>
-<track name="Saudi Arabia">
+<track>
+<name>Saudi Arabia</name>
 <esteban points="0">13</esteban>
 <pierre points="0">DNF</pierre>
 <team>0</team>
 <image>sa.png</image>
 </track>
-<track name="Australia">
+<track>
+<name>Australia</name>
 <esteban points="0">16</esteban>
 <pierre points="0">13</pierre>
 <team>0</team>
 <image>aus.png</image>
 </track>
-<track name="Japan">
+<track>
+<name>Japan</name>
 <esteban points="0">15</esteban>
 <pierre points="0">16</pierre>
 <team>0</team>
 <image>jap.png</image>
 </track>
-<track name="China">
+<track>
+<name>China</name>
 <esteban points="0">11</esteban>
 <pierre points="0">13</pierre>
 <team>0</team>
 <image>chi.png</image>
 </track>
-<track name="Miami">
+<track>
+<name>Miami</name>
 <esteban points="1">10</esteban>
 <pierre points="0">12</pierre>
 <team>1</team>
 <image>mia.png</image>
 </track>
-<track name="Emilia-Romagna">
+<track>
+<name>Emilia-Romagna</name>
 <esteban points="0">14</esteban>
 <pierre points="0">16</pierre>
 <team>0</team>
 <image>er.png</image>
 </track>
-<track name="Monaco">
+<track>
+<name>Monaco</name>
 <esteban points="0">DNF</esteban>
 <pierre points="1">10</pierre>
 <team>1</team>
