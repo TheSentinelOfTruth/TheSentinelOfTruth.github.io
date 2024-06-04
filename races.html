@@ -17,7 +17,7 @@
 	});
 function xmlParser(xml) {
     $(xml).find("track").each(function () {
-$(".racesr").append('<li><div class="race">' + '<img class="layout" src="' + $(this).find("image").text() + '">' + '<p class="raceName">' + $(this).find("name").text() + "</p>" + '<div class="esteban">' + '<p class="driver">Escteban</p>' + '<p class="positionStr">Position</p>' + '<p class="position">' + $(this).find("esteban").text() + '</p><p class="pointsStr">Points</p>' + '<p class="points">' + $(this).find("esteban").attr("points") + "</p></div>" + '<div class="pierre">' + '<p class="driver">Pierre</p>' + '<p class="positionStr">Position</p>' + '<p class="position">' + $(this).find("pierre").text() + '</p><p class="pointsStr">Points</p>' + '<p class="points">' + $(this).find("pierre").attr("points") + "</p></div></div></li>");
+$(".racesr").append('<li><div class="race">' + '<img class="layout" src="' + $(this).find("image").text() + '">' + '<p class="raceName">' + $(this).find("name").text() + "</p>" + '<div class="esteban">' + '<p class="driver">Escteban</p>' + '<p class="positionStr">Position</p>' + '<p class="position">' + $(this).find("esteban").text() + '</p><p class="pointsStr">Points</p>' + '<p class="points">' + $(this).find("esteban").attr("points") + "</p></div>" + '<div class="pierre">' + '<p class="driver">Pierre</p>' + '<p class="positionStr">Position</p>' + '<p class="position">' + $(this).find("pierre").text() + '</p><p class="pointsStr">Points</p>' + '<p class="points">' + $(this).find("pierre").attr("points") + "</p></div>" + '<p class="teamPoints">Team: </p>'+ '<p class="tPoints">' + $(this).find("team").text() + "</p></div></li>");
   
  });
 } 
@@ -164,6 +164,12 @@ $(".racesr").append('<li><div class="race">' + '<img class="layout" src="' + $(t
 		
 		.esteban > p {
 		  margin: 0.5em;
+		}
+		
+		.teamPoints{margin-top: 8.5%;}
+		.tPoints{
+		margin-top: 8.5%;
+		margin-right: 3%;
 		}
 		
 		li{padding-top: 1em;}
